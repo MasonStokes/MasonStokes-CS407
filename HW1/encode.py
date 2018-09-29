@@ -15,10 +15,9 @@ def encode(input_string):
 		if(input_string[i] == input_string[i+1]):
 			count += 1
 		else:
-			if(count > 1):
-				#Ignore if no repeats.
-				storechar += str(count)
-			storechar += string[i+1]
+    		if(count >= 1):
+    			storechar += str(count)
+			storechar += input_string[i+1]
 			count = 1
 
 	#print last Char.
