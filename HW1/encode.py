@@ -15,8 +15,8 @@ def encode(input_string):
 		if(input_string[i] == input_string[i+1]):
 			count += 1
 		else:
-    		if(count >= 1):
-    			storechar += str(count)
+			if(count >= 1):
+    				storechar += str(count)
 			storechar += input_string[i+1]
 			count = 1
 
