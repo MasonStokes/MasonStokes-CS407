@@ -12,16 +12,18 @@ def encode(input_string):
 
 	#Iterate through loop, skipping last one.
 	for i in range(len(input_string) - 1 ):
+		#This adds to the count for each char if the next item in the input string is an equal char.
 		if(input_string[i] == input_string[i+1]):
 			count += 1
+		#This will add to the count to the stored char which is the compressed stirng, if a char doesn't have the same char following it.
 		else:
 			if(count >= 1):
-    				storechar += str(count)
+				storechar += str(count)
 			storechar += input_string[i+1]
 			count = 1
 
-	#print last Char.
-	if(count>1):
-		storechar += str(count)
+
+	
+	storechar += str(count)
 
 	return storechar
